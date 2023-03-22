@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Pixel Art Drawing App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+
+      <div class="worknameDiv">
+        <label>Workname</label>
+        <input type="text" placeholder="Untitled" maxlength="50" id="workname">
+      </div>
+
+
+      <div class="inputs">
+        <div>
+          <label>Width</label>
+          <input type="text" placeholder="30<w<120" maxlength="3" id="widthInput">
+        </div>
+
+        <div>
+          <label>Height</label>
+          <input type="text" placeholder="20<h<60" maxlength="3" id="heightInput">
+        </div>
+
+      </div>
+
+
+      <div class="bg">
+        <label>Background</label>
+        <div>
+          <span class="background active" data-c="#fbf6ed">White</span>
+          <span class="background" data-c="#000">Black</span>
+          <span class="background" data-c="custom">Custom &nbsp <input type="color" id="ccp" value="#e6c89b"></span>
+        </div>
+      </div>
+
+
+      <button id="start">Start</button>
+
+    </div>
+
+
+
+
+
+    <div class="wrap2 fade">
+
+      <div class="board"></div>
+
+      <div class="tools">
+        <input type="color" id="color" value="#ff5b5b" oninput="setColor()">
+        <span class="pen activeTool" onclick="changeTool(this)"><i class="fa-solid fa-pen"></i></span>
+        <span class="erase" onclick="changeTool(this)"><i class="fa-solid fa-eraser"></i></span>
+        <span class="fill" onclick="fill()">Fill</span>
+        <span class="clear" onclick="clearBoard()">Clear</span>
+        <span class="download" onclick="downloadPixelArt()">Download</span>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
